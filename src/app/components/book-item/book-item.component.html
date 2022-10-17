@@ -1,10 +1,12 @@
-<div class="card" style="width: 18rem;">
+<div class="card" style="width: 18rem;" *ngIf="book">
     <div class="card-body">
-        <h5 class="card-title">Book title</h5>
-        <h6>Author</h6>
+        <h5 class="card-title">{{book.title}}</h5>
+        <h6>{{book.author}}</h6>
         <p class="card-text">
-            Genre: horror
-            ISBN: isbn
+            Genre: {{book.genre}}
+            ISBN: {{book.isbn}}
         </p>
+        <a href="#" class="btn btn-danger">Delete</a>
+        <a href="#" class="btn btn-primary">Edit</a>
     </div>
   </div>

@@ -1,7 +1,2 @@
 <app-search></app-search>
-<app-book-item></app-book-item>
-<app-book-item></app-book-item>
-<app-book-item></app-book-item>
-<app-book-item></app-book-item>
-<app-book-item></app-book-item>
-<app-book-item></app-book-item>
+<app-book-item *ngFor="let item of books$ | async" [book]="item"></app-book-item>

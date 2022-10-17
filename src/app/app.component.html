@@ -1,4 +1,4 @@
 <h1>book list app</h1>
-<app-book-list></app-book-list>
-<button type="button" class="btn btn-primary">Add new book</button>
-<app-add-book></app-add-book>
+<app-book-list [books$]="books$"></app-book-list>
+<button type="button" class="btn btn-primary" (click)="toggleAdd()">{{adding ? "Cancel" : "Add new book"}}</button>
+<app-add-book *ngIf="adding" (addedBook)="handleAdd()"></app-add-book>
