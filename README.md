@@ -1,27 +1,21 @@
-# Bookapp2
+# Book app exercise
+Provide the following features:
+- As a user i an see a list of books. Every book object will render a book-item component.
+- As a user i can click the "add new book" button to toggle the add-book form. The button text changes to "cancel". When i click this cancel button the add-book form will dissapear.
+- As a user i can add a new book using the add-book form. The list will automatically refresh containing the new book. 
+- As a user i can filter the book-list based on a keyboard in the search component. This will find books containing the keyword in the title property of a book object.
+- As a user i can delete a book item. After the delete the list will automatically refresh.
+- As a user i can update a book item. You can either create a new component that handles the update or reuse the add-book form component.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.5.
+## api endpoints
+You can cosume the following public api:
+```
+https://books.d-ries.be/api/book
+```
+Available endpoints:
+- `GET /api/book`: returns all book objects
+- `POST /api/book`: add a new book object
+- `DELETE /api/book/:id`: delete a book based on the id provided in the url
+- `PUT /api/book/:id`: update a book object based on the id provided in the url
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+This API will reset every minute.
